@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1e1e1e; /* 明るめのダーク背景 */
+    color: #e0e0e0; /* テキスト色を淡い灰色に */
+    font-size: 1.2em;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #e0e0e0; /* タイトルも淡い灰色に */
+}
+
+.comparison-slider {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid #666; /* スライダーに淡い枠線を追加 */
+}
+
+.image-layer {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: inset(0 50% 0 0);
+}
+
+.select-container {
+    position: absolute;
+    z-index: 10;
+    font-size: 0.9em;
+    padding: 0;
+    background-color: transparent; /* 透明のまま */
+    border: none;
+    opacity: 0.7; /* 透明度を70%に設定 */
+}
+
+/* 左上隅角に配置し、上辺から3pxの隙間を設定 */
+.left-select {
+    top: 3px;
+    left: 10px;
+}
+
+/* 右上隅角に配置し、上辺から3pxの隙間を設定 */
+.right-select {
+    top: 3px;
+    right: 10px;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 2px; /* スライダー幅を2pxに設定 */
+    background-color: #ffffff; /* スライダーを白に */
+    cursor: ew-resize;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* 輪郭に影をつける */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    font-size: 1.5em;
+    color: #ffffff; /* 矢印の色を白に */
+}
+
+.left-arrow::before {
+    content: "<";
+    margin-right: 10px;
+}
+
+.right-arrow::before {
+    content: ">";
+    margin-left: 10px;
+}
