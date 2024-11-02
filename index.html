@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter Wilds steam版 グラフィック設定比較</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Monster Hunter Wilds steam版 グラフィック設定比較</h1>
+
+    <div class="comparison-slider" id="comparison-slider">
+        <!-- 左側の画像選択プルダウンメニュー（左上隅角に配置） -->
+        <div class="select-container left-select">
+            <select id="top-image">
+                <option value="1ウルトラパフォーマンス.jpg" selected>ウルトラパフォーマンス</option>
+                <option value="2パフォーマンス.jpg">パフォーマンス</option>
+                <option value="3バランス.jpg">バランス</option>
+                <option value="4クオリティ.jpg">クオリティ</option>
+                <option value="5NVIDIA_DLAA.jpg">NVIDIA_DLAA</option>
+            </select>
+        </div>
+
+        <!-- 右側の画像選択プルダウンメニュー（右上隅角に配置） -->
+        <div class="select-container right-select">
+            <select id="bottom-image">
+                <option value="1ウルトラパフォーマンス.jpg">ウルトラパフォーマンス</option>
+                <option value="2パフォーマンス.jpg">パフォーマンス</option>
+                <option value="3バランス.jpg">バランス</option>
+                <option value="4クオリティ.jpg" selected>クオリティ</option>
+                <option value="5NVIDIA_DLAA.jpg">NVIDIA_DLAA</option>
+            </select>
+        </div>
+
+        <!-- 下レイヤーの画像 -->
+        <img src="4クオリティ.jpg" alt="下レイヤー画像" class="image-layer" id="bottom-layer">
+
+        <!-- 上レイヤーの画像 -->
+        <div class="overlay">
+            <img src="1ウルトラパフォーマンス.jpg" alt="上レイヤー画像" class="image-layer" id="top-layer">
+        </div>
+
+        <!-- スライダーのハンドル -->
+        <div class="slider-handle" id="slider-handle">
+            <span class="arrow left-arrow"></span>
+            <span class="arrow right-arrow"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
