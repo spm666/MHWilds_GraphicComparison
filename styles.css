@@ -23,7 +23,7 @@ h1 {
     max-width: 1000px;
     overflow: hidden;
     margin-top: 20px;
-    border: 1px solid #666; /* スライダーに淡い枠線を追加 */
+    margin-bottom: 80px; /* スライダー下の余白を増やして、スクロールを可能に */
 }
 
 .image-layer {
